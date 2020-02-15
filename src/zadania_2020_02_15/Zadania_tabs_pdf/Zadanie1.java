@@ -1,4 +1,4 @@
-package zadania_2020_02_15;
+package zadania_2020_02_15.Zadania_tabs_pdf;
 
 import java.util.Arrays;
 import java.util.Random;
