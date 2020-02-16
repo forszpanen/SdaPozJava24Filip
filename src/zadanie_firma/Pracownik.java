@@ -1,7 +1,6 @@
-package zadania_2020_02_15.program2012pdf;
+package zadanie_firma;
 
 public class Pracownik {
-
     private String imie;
     private String nazwisko;
     private char plec;
@@ -22,29 +21,25 @@ public class Pracownik {
         this.stan_cywilny = stan_cywilny;
     }
 
-    public boolean sprawdzCzyPensjaJestPowyzejPodanejWartosci(float wartos){
-        return placa > wartos;
+    public boolean czyPlacaJestPowyzejPodanejWartosci(float podanaWartosc){
+        return placa > podanaWartosc;
     }
 
-    public void wyswietlWszystkieDaneOPracowaniku() {
-        System.out.println(toString());
+    public void wypiszSpecjalnie(){
+        String napis = "Pracownik{" +
+                "imie='" + imie.toUpperCase() + '\'' +
+                ", nazwisko='" + nazwisko.toUpperCase() + '\'' +
+                '}';
+        System.out.println(napis);
     }
 
-    public void wyswietlOkrojoneDane() {
-        String okrojone = "Pracownik{" +
+    public void wypiszOkrojoneDane(int index) {
+        String napis = "Index:" + index + "|" + "Pracownik{" +
                 "imie='" + imie + '\'' +
                 ", nazwisko='" + nazwisko + '\'' +
                 ", placa=" + placa +
                 '}';
-        System.out.println(okrojone);
-    }
-
-    public void wyswietlSpecjalneDane() {
-        String okrojone = "Pracownik{" +
-                "imie='" + imie.toUpperCase() + '\'' +
-                ", nazwisko='" + nazwisko.toUpperCase() + '\'' +
-                '}';
-        System.out.println(okrojone);
+        System.out.println(napis);
     }
 
     @Override
@@ -60,7 +55,6 @@ public class Pracownik {
                 ", stan_cywilny=" + stan_cywilny +
                 '}';
     }
-
 
     public String getImie() {
         return imie;
@@ -125,7 +119,4 @@ public class Pracownik {
     public void setStan_cywilny(boolean stan_cywilny) {
         this.stan_cywilny = stan_cywilny;
     }
-
-
-
 }
