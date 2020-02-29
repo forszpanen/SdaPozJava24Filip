@@ -1,5 +1,7 @@
 package zadanie_firma;
 
+import java.util.Arrays;
+
 public class Pracownik {
     private String imie;
     private String nazwisko;
@@ -9,6 +11,7 @@ public class Pracownik {
     private int wiek;
     private int dzieci;
     private boolean stan_cywilny;
+    private static String[] pola = {"imie", "nazwisko", "wiek"};
 
     public Pracownik(String imie, String nazwisko, char plec, int nr_dzialu, float placa, int wiek, int dzieci, boolean stan_cywilny) {
         this.imie = imie;
@@ -19,6 +22,10 @@ public class Pracownik {
         this.wiek = wiek;
         this.dzieci = dzieci;
         this.stan_cywilny = stan_cywilny;
+    }
+
+    public static void wypiszPolaDoEdycji(){
+        System.out.println(Arrays.toString(pola));
     }
 
     public boolean czyPlacaJestPowyzejPodanejWartosci(float podanaWartosc){
